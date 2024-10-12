@@ -1,8 +1,9 @@
 const express = require('express');
-const { Note} = require("../models/note");
-const mongoose = require("mongoose");
 const router = express.Router();
 const upload = require('../middleware/uploadFile');
+const validateRequest = require("../middleware/validateRequest");
+const { getNotesAction, getNoteAction, createNoteAction, editNoteAction, deleteNoteAction} = require("../controller/note");
+const { createNoteRequestValidations, updateNoteRequestValidations } = require("../requestValidation/note/note");
 
 /**
  * @swagger
@@ -26,15 +27,7 @@ const upload = require('../middleware/uploadFile');
  *       '500':
  *         description: Error interno del servidor.
  */
-router.get('/', async (req, res) => {
-    try {
-        const notes = await Note.find({});
-        return res.status(200).json(notes)
-    } catch (e) {
-        console.log("error",e)
-        return res.status(500).json({"message": `Error: ${e}`})
-    }
-});
+router.get('/', getNotesAction);
 
 /**
  * @swagger
@@ -60,16 +53,7 @@ router.get('/', async (req, res) => {
  *       '500':
  *         description: Error interno del servidor.
  */
-router.get('/:id', async (req, res) => {
-    const { id } = req.params;
-    try {
-        const note = await Note.findById(id);
-        return res.status(200).json(note)
-    } catch (e) {
-        console.log("error",e)
-        return res.status(500).json({"message": `Error: ${e}`})
-    }
-});
+router.get('/:id', getNoteAction);
 
 /**
  * @swagger
@@ -94,19 +78,7 @@ router.get('/:id', async (req, res) => {
  *       '500':
  *         description: Error interno del servidor.
  */
-router.post('/', upload.single('image'), async (req, res) => {
-    const { body } = req;
-    const file = req.file;
-    if (file) body.image = file.path;
-    else return res.status(400).json({"message": "No se subió una imagen"})
-    try {
-        const note = await Note.create(body);
-        return res.status(201).json(note)
-    } catch (e) {
-        return res.status(500).json({"message": `Error: ${e}`})
-    }
-
-});
+router.post('/', upload.single('image'), createNoteRequestValidations, validateRequest, createNoteAction);
 
 /**
  * @swagger
@@ -138,19 +110,7 @@ router.post('/', upload.single('image'), async (req, res) => {
  *      '500':
  *        description: Error interno del servidor.
  */
-router.put('/:id', upload.single('image'), async (req, res) => {
-    const { id } = req.params;
-    const { body } = req;
-    const file = req.file;
-    if (file) body.image = file.path;
-
-    try {
-        const note = await Note.findOneAndUpdate({_id: id}, body);
-        return res.status(200).json(note)
-    } catch (e) {
-        return res.status(500).json({"message": `Error: ${e}`})
-    }
-});
+router.put('/:id', upload.single('image'), updateNoteRequestValidations, validateRequest, editNoteAction);
 
 /**
  * @swagger
@@ -176,16 +136,7 @@ router.put('/:id', upload.single('image'), async (req, res) => {
  *      '500':
  *        description: Error interno del servidor.
  */
-router.delete('/:id',async (req, res) => {
-    const { id } = req.params;
-    try {
-        await Note.findByIdAndDelete(id);
-        return res.status(200).json({"message": "Noticia eliminado exitosamente"})
-    } catch (e) {
-        console.log("error",e)
-        return res.status(500).json({"message": `Error: ${e}`})
-    }
-});
+router.delete('/:id', deleteNoteAction);
 
 /**
  * @swagger
