@@ -2,6 +2,7 @@ const express = require('express');
 const { Note} = require("../models/note");
 const mongoose = require("mongoose");
 const router = express.Router();
+const upload = require('../middleware/uploadFile');
 
 /**
  * @swagger
@@ -27,12 +28,11 @@ const router = express.Router();
  */
 router.get('/', async (req, res) => {
     try {
-        const notes = await Note.find({}).select('-image');
-        //const notes = await Note.find({});
+        const notes = await Note.find({});
         return res.status(200).json(notes)
     } catch (e) {
         console.log("error",e)
-        return res.status(500).json(e)
+        return res.status(500).json({"message": `Error: ${e}`})
     }
 });
 
@@ -63,12 +63,11 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const note = await Note.findById(id).select('-image');
-        //const note = await Note.findById(id);
+        const note = await Note.findById(id);
         return res.status(200).json(note)
     } catch (e) {
         console.log("error",e)
-        return res.status(500).json(e)
+        return res.status(500).json({"message": `Error: ${e}`})
     }
 });
 
@@ -95,8 +94,17 @@ router.get('/:id', async (req, res) => {
  *       '500':
  *         description: Error interno del servidor.
  */
-router.post('/', async (req, res) => {
-    /** AGREGAR MULTER */
+router.post('/', upload.single('image'), async (req, res) => {
+    const { body } = req;
+    const file = req.file;
+    if (file) body.image = file.path;
+    else return res.status(400).json({"message": "No se subió una imagen"})
+    try {
+        const note = await Note.create(body);
+        return res.status(201).json(note)
+    } catch (e) {
+        return res.status(500).json({"message": `Error: ${e}`})
+    }
 
 });
 
@@ -130,8 +138,18 @@ router.post('/', async (req, res) => {
  *      '500':
  *        description: Error interno del servidor.
  */
-router.put('/:id',(req, res) => {
-    /** AGREGAR MULTER */
+router.put('/:id', upload.single('image'), async (req, res) => {
+    const { id } = req.params;
+    const { body } = req;
+    const file = req.file;
+    if (file) body.image = file.path;
+
+    try {
+        const note = await Note.findOneAndUpdate({_id: id}, body);
+        return res.status(200).json(note)
+    } catch (e) {
+        return res.status(500).json({"message": `Error: ${e}`})
+    }
 });
 
 /**
@@ -165,7 +183,7 @@ router.delete('/:id',async (req, res) => {
         return res.status(200).json({"message": "Noticia eliminado exitosamente"})
     } catch (e) {
         console.log("error",e)
-        return res.status(500).json(e)
+        return res.status(500).json({"message": `Error: ${e}`})
     }
 });
 

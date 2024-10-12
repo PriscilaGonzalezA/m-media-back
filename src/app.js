@@ -30,6 +30,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerOptions));
     );
 })();
 
+// Para ver las imagenes subidas
+app.use('/uploads', express.static('uploads'));
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
