@@ -4,12 +4,16 @@
   "description": "Prueba técnica Mega Media, api",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon --env-file=.env src/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "nodemon": "^3.1.7"
+    "mongoose": "^8.7.1",
+    "nodemon": "^3.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }
