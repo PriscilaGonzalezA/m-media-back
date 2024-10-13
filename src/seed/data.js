@@ -7,14 +7,14 @@ const seedData = [
         description: "El Nuevo Amores de Mercado relata el encuentro de dos hombres desconocidos, con vidas diametralmente opuestas, pero que físicamente son idénticos. Ambos intercambiarán roles en un confuso incidente, dejando a Pelluco Solís como CEO de una poderosa empresa familiar, y a Rodolfo Ruttemeyer como garzón el Mercado\n" +
             "Central.",
         image: 'uploads/image1.jpg',
-        url:'https://www.youtube.com/watch?v=WxQ-gfKYYf4&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=1&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
         author: 'Andreu Cardenas',
     },
     {
         title: "PRIMER AÑO DE “ALERTA ROMÁNTICA”",
         description: "“Alerta Romántica”, programa que conduce el periodista de Megamedia Rodrigo Sepúlveda en Radio Romántica, cumple un año al aire.",
         image: 'uploads/image2.jpg',
-        url:'https://www.youtube.com/watch?v=96w1vUV0zcM&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=2&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=4NRXx6U8ABQ',
         author: 'Maria Manuela Cobos',
     },
     {
@@ -29,7 +29,7 @@ const seedData = [
             "\n" +
             "El programa, que va de lunes a viernes desde las 15:00 a 18:00, fue una de las propuestas innovadoras que realizó Radio Romántica. Con el sello de entregarle a su audiencia nuevos contenidos cercanos y de calidad, con buena música y contingencia, ha sido todo un éxito para los auditores de la radio.",
         image: 'uploads/image3.jpg',
-        url:'https://www.youtube.com/watch?v=6bdV-mmDH9o&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=3&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=JGwWNGJdvx8',
         author: 'Raimundo Puerto',
     },
     {
@@ -64,7 +64,7 @@ const seedData = [
             "Meganoticias Prime\n" +
             "Hora 0\n",
         image: 'uploads/image4.jpg',
-        url:'https://www.youtube.com/watch?v=FQLSrgiDyUg&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=4&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=q0hyYWKXF0Q',
         author: 'Juan Vicente Pinilla',
     },
     {
@@ -115,7 +115,7 @@ const seedData = [
             "\n" +
             "En cuanto a los programas más vistos de Mega durante el mes de septiembre 2024, se ubica en primer lugar “Al Sur del Corazón”, luego “El Señor de la Querencia” ocupa el segundo puesto. Posteriormente, “Hasta Cuándo”, “Juego de Ilusiones” y “Seyran y Ferit” completan el top 5 de los espacios de Mega preferidos por las audiencias.  ",
         image: 'uploads/image5.jpg',
-        url:'https://www.youtube.com/watch?v=MTzpG-VR1to&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=5&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=QtXby3twMmI',
         author: 'Maria Asuncion Caballero',
     },
     {
@@ -139,7 +139,7 @@ const seedData = [
             "\n" +
             "Para ser parte de “Talento Mallplaza”, las personas mayores de 18 años que quieran mostrar sus dotes con la danza solo deben concurrir a los centros urbanos de Mallplaza el día de la convocatoria y ser parte de esta experiencia que promete llevar a los mejores talentos del país al escenario que se merecen. Para más información invitamos a revisar las plataformas de Mallplaza a partir del próximo jueves 3 de octubre, fecha en la que comenzarán las convocatorias para los tres casting masivos.",
         image: 'uploads/image6.jpg',
-        url:'https://www.youtube.com/watch?v=nD9uaV8tRQc&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=6&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=wXhTHyIgQ_U',
         author: 'Chloe Torre',
     },
     {
@@ -152,7 +152,7 @@ const seedData = [
             "\n" +
             "Según Gloria San Martín, directora de Radio Romántica, “para nosotros es muy importante incorporar a nuestro equipo de Radio Romántica a dos figuras potentes de la televisión chilena como lo son José Antonio Neme y Karen Doggenweiler. Tendremos todo el humor, la ironía, esa irreverencia, ese lenguaje directo de José Antonio y la simpatía y versatilidad que tiene nuestra gran animadora del Festival de Viña”. ",
         image: 'uploads/image7.jpg',
-        url:'https://www.youtube.com/watch?v=evLn0rX4888&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=7&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=YQHsXMglC9A',
         author: 'Bernabe Gabarri',
     },
     {
@@ -160,7 +160,7 @@ const seedData = [
         description: "Este jueves comenzará la fecha 11 del Campeonato Mundial de Rally que se correrá en Chile y Megadeportes, en las distintas plataformas de Megamedia, prepara una amplia transmisión y cobertura para que los fanáticos no se pierdan detalle alguno de sus mejores momentos. La competencia reúne a los mejores pilotos y los mejores autos del planeta, en un escenario de alta complejidad como son los cerrados e irregulares caminos de la región del Biobío.\n" +
             "\n",
         image: 'uploads/image8.jpg',
-        url:'https://www.youtube.com/watch?v=xBh1ZcCI4Z4&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=8&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=kJQP7kiw5Fk',
         author: 'Melchor Paredes',
     },
     {
@@ -169,7 +169,7 @@ const seedData = [
             "\n" +
             "Santiago, lunes 2 de septiembre de 2024.- Esta mañana durante la emisión del matinal “Mucho Gusto” y en medio del entusiasmo de sus compañeros y compañeras de labor, la conductora del espacio Karen Doggenweiler fue presentada oficialmente como la animadora del próximo Festival Internacional de la Canción de Viña del Mar. Una mujer con una destacada trayectoria, carisma y quien además encarna todos los valores y la esencia de este importante evento del verano en nuestro país.",
         image: 'uploads/image9.jpg',
-        url:'https://www.youtube.com/watch?v=xatxVcRg__k&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=9&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=DyDfgMOUjCI',
         author: 'Raquel Montiel',
     },
     {
@@ -178,7 +178,7 @@ const seedData = [
             "\n" +
             "Al Sur del Corazón centra su trama en la familia de las Bravo, conocidas en el pueblo como “las Bravas” quienes a punta de esfuerzo y valentía luchan por sus tierras y enfrentan los desafíos de los tiempos con su negocio de lechería. Además, arrastran con la maldición que los hombres sólo traen desgracias a sus vidas, por lo que estas mujeres aguerridas no permiten que ni se les acerquen.",
         image: 'uploads/image10.jpg',
-        url:'https://www.youtube.com/watch?v=WxLvJ6R-gu4&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=10&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=09R8_2nJtjg',
         author: 'Raquel Montiel',
     },
     {
@@ -187,14 +187,14 @@ const seedData = [
             "\n" +
             "El noticiero abordará las noticias más importantes de la jornada y anticipará la pauta informativa del día que comienza. La conducción estará a cargo del periodista Carlos Jara, quien también complementará la información con los periodistas Lucas Quinn en estudio digital y Fernando Fabres tomando el pulso en vivo desde las calles. De este modo, \"Hora 0\" proyectará el día informativo, en un espacio que estará ampliamente conectado con la actualidad y la audiencia a través de las redes sociales.  ",
         image: 'uploads/image11.jpg',
-        url:'https://www.youtube.com/watch?v=0zbBXaA2FUQ&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=11&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=bnVUHWCynig',
         author: 'Raquel Montiel',
     },
     {
         title: "“Viaje a lo insólito” debuta este sábado en Mega cargado de impactantes historias",
         description: "Este sábado 28 de septiembre, después de Meganoticias Prime, se estrenará el nuevo programa de docuficción de Mega, “Viaje a lo insólito”. El espacio contará con la conducción del periodista y escritor Sergio Paz, quien a lo largo de la temporada nos mostrará cerca de 50 historias diferentes ocurridas en Chile, las que dejarán a los espectadores asombrados por lo extrañas e insólitas que son. ",
         image: 'uploads/image12.jpg',
-        url:'https://www.youtube.com/watch?v=0QlzvGU255g&list=PLuUOQ9D9oCVho_TxX4kbUJ-TYvjxcmYzF&index=12&ab_channel=SoundMachineChannel',
+        url:'https://www.youtube.com/watch?v=7wtfhZwyrcc',
         author: 'Martin Santos',
     },
 ];
